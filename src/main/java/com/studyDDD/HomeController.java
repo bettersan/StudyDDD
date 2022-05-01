@@ -1,4 +1,4 @@
-package com.studyDDD.www;
+package com.studyDDD;
 
 import java.text.DateFormat;
 import java.util.Date;
