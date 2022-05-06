@@ -1,4 +1,4 @@
-package com.studyDDD.domain;
+package com.studyDDD.domain.Order;
 
 public class OrderLine {
 	private Product product;
@@ -18,7 +18,6 @@ public class OrderLine {
 	}
 	
 	public int getAmounts() {
-		
-		
+		return amounts;
 	}
 }

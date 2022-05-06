@@ -13,9 +13,10 @@ public enum OrderState {
 		}
 	},
 	
-	SHIPPED,
-	DELIVERING, //배송중
-	DELIVERY_COMPLETED; //배송완료
+	SHIPPED, //배송됨
+	DELIVERING, //배달중
+	DELIVERY_COMPLETED, //배달완료
+	CANCELED;
 	
 	public boolean isShippingChangeable() {
 		return false;
