@@ -1,0 +1,18 @@
+package com.studyDDD.domain.User;
+
+public class UserInfo {
+	private String id;
+	private String name;
+	
+	public UserInfo() {
+		
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+}
