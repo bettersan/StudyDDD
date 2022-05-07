@@ -1,4 +1,4 @@
-package com.studyDDD.domain.Order;
+package com.studyDDD.domain;
 
 public class OrderLine {
 	private Product product;

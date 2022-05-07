@@ -1,9 +1,9 @@
-package com.studyDDD.domain.Order;
+package com.studyDDD.domain;
 
 import java.util.List;
 
-import com.studyDDD.domain.Order.OrderLine;
-import com.studyDDD.domain.Order.ShippingInfo;
+import com.studyDDD.domain.OrderLine;
+import com.studyDDD.domain.ShippingInfo;
 import com.studyDDD.dontKnow.Money;
 import com.studyDDD.enums.OrderState;
 
