@@ -1,6 +1,6 @@
-package com.studyDDD.domain.Order;
+package com.studyDDD.domain;
 
-import com.studyDDD.dontKnow.Money;
+import com.studyDDD.Money;
 
 public class OrderLine {
 	private Product product;

@@ -1,4 +1,4 @@
-package com.studyDDD.domain.User;
+package com.studyDDD.domain;
 
 public class UserInfo {
 	private String id;

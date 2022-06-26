@@ -1,4 +1,4 @@
-package com.studyDDD.domain.Order;
+package com.studyDDD.domain;
 
 public class Address {
 	private String address1;

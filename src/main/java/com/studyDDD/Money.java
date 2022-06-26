@@ -1,4 +1,4 @@
-package com.studyDDD.dontKnow;
+package com.studyDDD;
 
 public class Money {
 	private int value;

@@ -1,10 +1,10 @@
-package com.studyDDD.domain.Order;
+package com.studyDDD.domain;
 
 import java.util.List;
 
-import com.studyDDD.domain.Order.OrderLine;
-import com.studyDDD.domain.Order.ShippingInfo;
-import com.studyDDD.dontKnow.Money;
+import com.studyDDD.Money;
+import com.studyDDD.domain.OrderLine;
+import com.studyDDD.domain.ShippingInfo;
 import com.studyDDD.enums.OrderState;
 
 // 주문
@@ -52,8 +52,8 @@ public class Order {
 		}
 	}
 	
-	private void calculateTotalAmounts() { //여기 어떻게 바꿔야되냐 ㅠㅠ
-		this.totalAmounts = orderLines.stream().mapToInt(x -> x.getAmounts()).sum();
+	private void calculateTotalAmounts() { //TODO 여기 어떻게 바꿔야되냐 ㅠㅠ
+		// this.totalAmounts = orderLines.stream().mapToInt(x -> x.getAmounts()).sum();
 	}
 	
 	

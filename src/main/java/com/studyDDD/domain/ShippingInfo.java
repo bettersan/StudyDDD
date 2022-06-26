@@ -1,4 +1,4 @@
-package com.studyDDD.domain.Order;
+package com.studyDDD.domain;
 
 // 배송정보
 public class ShippingInfo {
