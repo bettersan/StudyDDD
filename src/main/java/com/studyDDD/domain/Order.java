@@ -2,22 +2,22 @@ package com.studyDDD.domain;
 
 import java.util.List;
 
+import com.studyDDD.EnOrderState;
 import com.studyDDD.Money;
 import com.studyDDD.domain.OrderLine;
 import com.studyDDD.domain.ShippingInfo;
-import com.studyDDD.enums.OrderState;
 
 // 주문
 public class Order {
 	private OrderNo id;
 	private String orderNumber;
 	private Orderer orderer;
-	private OrderState state;
+	private EnOrderState state;
 	private ShippingInfo shippingInfo;
 	private List<OrderLine> orderLines; //주문항목? 주문..라인?
 	private Money totalAmounts;
 	
-	public Order(Orderer orderer, List<OrderLine> orderLines, ShippingInfo shippingInfo, OrderState state) {
+	public Order(Orderer orderer, List<OrderLine> orderLines, ShippingInfo shippingInfo, EnOrderState state) {
 		// 생성자에서 도메인 규칙을 구현할 수 있다.
 		setOrderer(orderer);
 		setOrderLines(orderLines);
@@ -40,7 +40,7 @@ public class Order {
 		calculateTotalAmounts();
 	}
 	
-	private void setOrderState(OrderState state) {
+	private void setOrderState(EnOrderState state) {
 		if(state == null) throw new IllegalArgumentException("no order state");
 		this.state = state;
 	}
@@ -58,7 +58,7 @@ public class Order {
 	
 	
 	private boolean isShippingChangeable() {
-		return state == OrderState.PAYMENT_WAITING || state == OrderState.PREPARING;
+		return state == EnOrderState.PAYMENT_WAITING || state == EnOrderState.PREPARING;
 	}
 	
 	public void changeShipped() {
@@ -77,11 +77,11 @@ public class Order {
 	
 	public void cancel() {
 		verifyNotYetShipped();
-		this.state = OrderState.CANCELED;
+		this.state = EnOrderState.CANCELED;
 	}
 	
 	private void verifyNotYetShipped() {
-		if(state != OrderState.PAYMENT_WAITING && state != OrderState.PREPARING) {
+		if(state != EnOrderState.PAYMENT_WAITING && state != EnOrderState.PREPARING) {
 			throw new IllegalStateException("already shipped");
 		}
 	}

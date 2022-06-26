@@ -1,6 +1,6 @@
-package com.studyDDD.enums;
+package com.studyDDD;
 
-public enum OrderState {
+public enum EnOrderState {
 	PAYMENT_WAITING{ //주문 대기중
 		public boolean isShippingChangeable() {
 			return true;
